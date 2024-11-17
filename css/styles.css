@@ -167,6 +167,12 @@ h1, h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.dynamic-title {
+    font-size: clamp(1.5em, 5vw, 3em); /* Размер шрифта динамически адаптируется к размеру экрана */
+    max-width: 100%; /* Устанавливаем ограничение по ширине */
+    text-align: center; /* Центрируем текст */
+}
+
 .social-icons {
     margin-top: 20px;
     display: flex;
