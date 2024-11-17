@@ -185,25 +185,33 @@ h1, h2 {
     opacity: 1;
 }
 
-.services__images {
+.services__container--aligned {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
+    justify-content: center; /* Центрируем оба элемента */
+    align-items: center; /* Вертикальное выравнивание элементов */
+    gap: 40px; /* Добавляем пространство между элементами */
+    flex-wrap: wrap; /* Обеспечиваем перенос на маленьких экранах */
 }
 
 .services__item {
-    flex: 1 1 calc(25% - 20px);
+    flex: 1 1 calc(50% - 20px); /* Устанавливаем ширину элементов, чтобы они были два в ряд */
     text-align: center;
     transition: transform 0.3s ease;
+    margin-bottom: 20px;
 }
 
 .services__item img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.services__item p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
 }
 
 .services__item:hover {
