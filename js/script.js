@@ -15,4 +15,25 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error('Не удалось найти элементы бургер-меню, навигации или overlay.');
     }
+
+    // Добавляем поведение появления/исчезновения секций при скролле
+    const contentSections = document.querySelectorAll('.content, .services, .about');
+
+    const handleScroll = () => {
+        contentSections.forEach(section => {
+            const sectionPosition = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (sectionPosition < windowHeight - 100) {
+                section.style.opacity = '1';
+                section.style.transform = 'translateY(0)';
+            } else {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(60px)';
+            }
+        });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Появление при загрузке страницы
 });

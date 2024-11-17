@@ -1,66 +1,113 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Одностраничный сайт с бургер-меню</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <div id="overlay" class="overlay"></div>
     <header class="header">
-        <div class="container">
-            <div class="header__logo">
-                <h1>Услуги нутрициолога</h1>
-            </div>
-            <img src="images/1.jpeg" alt="Прозрачная картинка" class="header__background-image">
-            <div class="header__burger" id="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="header__nav" id="nav">
-                <ul>
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </nav>
+      <div class="container">
+        <div class="header__logo">
+          <h1>Услуги нутрициолога</h1>
         </div>
+        <img
+          src="images/1.jpeg"
+          alt="Прозрачная картинка"
+          class="header__background-image"
+        />
+        <div class="header__burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="header__nav" id="nav">
+          <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Обо мне</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
-        <section class="content">
-            <div class="container">
-                <h2>Добро пожаловать на мой ОТЛИЧНЫЙ сайт!</h2>
-                <p>Меня зовут Анна и я помогу тебе избавиться от лишних ДЕНЬОГ!</p>
-                <div class="content__image">
-                    <img src="images/2.jpg" alt="Контентная картинка">
-                </div>
+      <section class="content">
+        <div class="container content__container">
+          <div class="content__text">
+            <h2>Добро пожаловать на мой ОТЛИЧНЫЙ сайт!</h2>
+            <p>Меня зовут Анна и я помогу тебе избавиться от лишних ДЕНЬОГ!</p>
+          </div>
+          <div class="content__image-wrapper">
+            <img
+              src="images/2.jpg"
+              alt="Контентная картинка"
+              class="content__image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="fullwidth-image">
+        <img
+          src="images/4.jpeg"
+          alt="Полноширинная картинка"
+          class="fullwidth-image__img"
+        />
+        <div class="fullwidth-image__text">Поверь, зайка моя, ты отдашь мне все до копейки!!!</div>
+      </section>
+
+      <section class="services">
+        <div class="container">
+          <div class="services__images">
+            <div class="services__item">
+              <img src="images/3.jpeg" alt="Картинка услуги 1" />
+              <p>ХАВАЙ ПРАВИЛЬНУЮ ПИЩУ!</p>
             </div>
-        </section>
-        <section class="services">
-            <div class="container">
-                <h2>ХАВАЙ ПРАВИЛЬНУЮ ПИЩУ!</h2>
-                <div class="services__image">
-                    <img src="images/3.jpeg" alt="Картинка услуги">
-                </div>
+            <div class="services__item">
+              <img src="images/2_12.jpg" alt="Картинка услуги 2" />
+              <p>Занимайся спортом СКОТИНА!</p>
             </div>
-        </section>
-        <section class="about">
-            <div class="container">
-                <h2>О нас</h2>
-                <div class="social-icons">
-                    <a href="#" class="social-icon"><img src="images/social-icons/telegram.png" alt="Telegram"></a>
-                    <a href="#" class="social-icon"><img src="images/social-icons/messenger.png" alt="Facebook"></a>
-                    <a href="#" class="social-icon"><img src="images/social-icons/instagram.png" alt="Instagram"></a>
-                    <a href="#" class="social-icon"><img src="images/social-icons/tik-tok.png" alt="TikTok"></a>
-                    <a href="#" class="social-icon"><img src="images/social-icons/twitter.png" alt="Twitter"></a>
-                </div>
+            <div class="services__item">
+              <img src="images/5.jpg" alt="Картинка услуги 3" />
+              <p>ЗАВЕДИ СЕБЕ МНОГО ДРУЗЕЙ!</p>
             </div>
-        </section>
+            <div class="services__item">
+              <img src="images/6.jpg" alt="Картинка услуги 4" />
+              <p>НАЙДИ СВОЮ ЛЮБОВЬ!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="container">
+          <h2>Добавься ко мне, и я помогу тебе!</h2>
+          <div class="social-icons">
+            <a href="#" class="social-icon"
+              ><img src="images/social-icons/telegram.png" alt="Telegram"
+            /></a>
+            <a href="#" class="social-icon"
+              ><img src="images/social-icons/messenger.png" alt="Facebook"
+            /></a>
+            <a href="#" class="social-icon"
+              ><img src="images/social-icons/instagram.png" alt="Instagram"
+            /></a>
+            <a href="#" class="social-icon"
+              ><img src="images/social-icons/tik-tok.png" alt="TikTok"
+            /></a>
+            <a href="#" class="social-icon"
+              ><img src="images/social-icons/twitter.png" alt="Twitter"
+            /></a>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
