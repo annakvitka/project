@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    position: relative;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.header__logo {
+    font-size: 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.header__background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.header__burger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 5; /* Увеличили z-index, чтобы бургер был поверх всех других элементов */
+    position: relative; /* Сделали позицию относительной для управления видимостью */
+    background-color: transparent; /* Убедились, что фон прозрачный */
+}
+
+.header__burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff; /* Цвет иконки бургера */
+    transition: background-color 0.3s ease; /* Анимация для плавного изменения */
+}
+
+/* Переходы при активном состоянии бургера */
+.header__burger.active span {
+    background-color: #ff6347; /* Изменение цвета при активном состоянии */
+}
+
+.header__nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease;
+    z-index: 5; /* Меню должно быть выше overlay, но ниже бургера */
+}
+
+.header__nav.active {
+    left: 0;
+}
+
+.header__nav ul {
+    list-style: none;
+    padding: 60px 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.header__nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.content, .services, .about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.content__image, .services__image, .about__image {
+    margin-top: 20px;
+}
+
+.content__image img, .services__image img, .about__image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon img:hover {
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .header__burger {
+        display: none;
+    }
+    .header__nav {
+        position: static;
+        width: auto;
+        height: auto;
+        display: block;
+        transition: none;
+    }
+    .header__nav ul {
+        flex-direction: row;
+    }
+}
