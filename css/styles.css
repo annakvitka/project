@@ -187,22 +187,23 @@ h1, h2 {
 
 .services__container--aligned {
     display: flex;
-    justify-content: center; /* Центрируем оба элемента */
-    align-items: center; /* Вертикальное выравнивание элементов */
-    gap: 40px; /* Добавляем пространство между элементами */
-    flex-wrap: wrap; /* Обеспечиваем перенос на маленьких экранах */
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .services__item {
-    flex: 1 1 calc(50% - 20px); /* Устанавливаем ширину элементов, чтобы они были два в ряд */
+    flex: 1 1 calc(50% - 20px); /* Два элемента в ряд */
+    margin-bottom: 20px;
     text-align: center;
     transition: transform 0.3s ease;
-    margin-bottom: 20px;
 }
 
-.services__item img {
-    max-width: 100%;
-    height: auto;
+.services__image {
+    width: 100%;
+    height: 300px; /* Задаем фиксированную высоту для всех изображений */
+    object-fit: cover; /* Обрезаем изображение, чтобы сохранить пропорции и заполнить контейнер */
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
